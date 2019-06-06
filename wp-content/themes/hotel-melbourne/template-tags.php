@@ -214,12 +214,4 @@ endif;
 if ( !is_active_sidebar( 'woocommerce-sidebar' ) )
 { ?>
 
-<style>
-	
-	.col-md-3.widget-area {
-    display: none;
-}
-
-</style>
-
 <?php } ?>

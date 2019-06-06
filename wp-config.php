@@ -32,7 +32,7 @@ define( 'DB_PASSWORD', 'MC2.mysql' );
 define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'jq0b8ucn-7dh$cA):XYF:K/]y|^W:nlDMIjBdQs1v`R=BqVQ(u%?Av0.F{Vh!WNv' );
-define( 'SECURE_AUTH_KEY',  'UnD+6]k7Ulx88,x;$FaYZH)UQ[PZ[{#gn,8<%?bqpdZ%73:-Gf3o((MTBg#M_xzC' );
-define( 'LOGGED_IN_KEY',    '^E|WJ.Hv|YmBwGNuDn;_WtxTjH8aBnGvk/G;}i.Jwwz,dT;+J^%DfV{o|.Cvkiw>' );
-define( 'NONCE_KEY',        'b?4pQ$q9Jbhx~0h}m/tM.ZRA8#5S=jwi#q3>XQ5,%V0,_-:_yB2,9pnj+qKz94it' );
-define( 'AUTH_SALT',        'C-V:c&7Oi0y5/6_q>mhy&%S@`lnI>5H.ryk*URBulg6f_3d2Q]*sU|;(O;8i58]q' );
-define( 'SECURE_AUTH_SALT', '`Y:U~|~kpmJ}^l~.Lk,0X~A8^jc^R.r[eU{ {2;t6Hw`:i7Qg$}G|0Aob<%C_,-#' );
-define( 'LOGGED_IN_SALT',   'O/{kA)RCYh<YAVgY]s#EsD-D ~<*j~AmaZ6v_:FvdNZbv;jBLRi`0Y({)s&BR{VH' );
-define( 'NONCE_SALT',       ')hl43ua2ZxU@o+tt`Ge-M.)smet$[DiOtDkZ]Bca_xCVf%ObJ!=-P0P|}).[O#t>' );
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 
@@ -79,18 +79,20 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
-
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+    define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
-// define('WP_TEMP_DIR',ABSPATH.'wp-content/tmp');
-define("FS_METHOD","direct");
-// define("FS_CHMOD_DIR",0777);
-// define("FS_CHMOD_FILE",0777);
+define('WP_TEMP_DIR', ABSPATH.'wp-content/tmp');/* WordPress的临时目录。*/
+
+define("FS_METHOD", "direct");
+
+define("FS_CHMOD_DIR", 0777);
+
+define("FS_CHMOD_FILE", 0777);
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
