@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<title>Space Diagram – MC2 Apartments</title>
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/hotel-melbourne/svg.css" />
+	<style type="text/css">
+		article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+		.rotate-0 .unit:hover .unit-block {
+			fill: pink;
+		}
+		.map__ground:hover {
+			stroke: #666;
+		}
+		.rotate-0 .map__ground:hover {
+			stroke: #bbb;
+		}
+		.surroundings.rotate-0,.levels.rotate-0 {
+			-webkit-transform: rotateX(0) rotateZ(0) translateZ(0);
+    		transform: rotateX(0) rotateZ(0) translateZ(0);
+		}
+	</style>
+	<script type="text/javascript" src="/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+	<script type="text/javascript">
+		(function($){
+		    // jQuery code is in here
+		    var unitComponent = {
+				state: {},
+				load: function () {
+					this.init();
+					this.handleClick();
+				},
+				init: function () {},
+				handleClick: function () {
+					$(".level").click(
+						function(e) {
+							e.preventDefault();
+							if ($(this).hasClass("level--1")) {
+								$(".level--2, .level--3").hide();
+							}
+							if ($(this).hasClass("level--2")) {
+								$(".level--1, .level--3").hide();
+							}
+							if ($(this).hasClass("level--3")) {
+								$(".level--1, .level--2").hide();
+							}
+							$(this).css('transform', 'translateZ(0)');
+							$(".surroundings, .levels").addClass("rotate-0");
+						}	
+					)
+				}
+			};
+			$( document ).ready(function() {
+			  // Handler for .ready() called.
+			  unitComponent.load();
+			});
+		})(jQuery);
+		
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="main">
+			<header class="codrops-header">
+				<!-- <div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Tutorials/AnimatedAnimals/" title="Previous Demo"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=26692" title="Back to the article"><span>Back to the Codrops article</span></a>
+				</div> -->
+				<h1>Sample Space Diagram of 32 Royal Road</h1>
+			</header>
+			<div class="mall">
+				<div class="surroundings">
+					<img class="surroundings__map" src="svg-surroundings.svg" alt="Surroundings"/>
+				</div>
+				<div class="levels" id="levels-layout">
+					<div class="level level--1" aria-label="Level 1">
+						<svg class="map map--1" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+							<title>Map Level 1</title>
+							<polygon points="50,90 125,90 125,70 400,70 400,50 675,50 675,30 910,30 910,10 1110,10 1110,375 1130,375 1130,620 1150,620 1150,700 800,700 800,500 600,500 600,520 430,520 430,500 300,500 300,520 150,520 150,540 50,540" stroke="#bbb" stroke-width="10"  class="map__ground" />
+							<!-- left__outline -->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="910px" height="5px" x="50px" y="220px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="150px" height="5px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="25px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /left__outline -->
+							<!-- left___area  -->
+							<g class="unit unit-1">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="50,90 125,90 125,70 320,70 320,220 50,220 " stroke="#ffffff" stroke-width="0" fill="#cccccc"/>
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="320px" y="70px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<g class="unit unit-2">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="325,70 400,70 400,50 595,50 595,220 325,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595" y="50px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-3">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="600,50 675,50 675,30 870,30 870,220 600,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="190px" x="870" y="30px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-4">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="875,30 910,30 910,10 1110,10 1110,200 960,200 960,220 875,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+							</g>
+							<g class="unit unit-5">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,205 1110,205 1110,375 1130,375 1130,430 965,430" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="475px" x="960px" y="225px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<!-- /left__area -->
+							<!--right out__line-->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="755px" height="5px" x="50px" y="345px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /right__outline -->
+							<!-- right__area -->
+							<g class="unit unit-6">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,435 1130,435 1130,620 1150,620 1150,700 965,700" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="170px" height="5px" x="965px" y="430px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-7">
+								<rect class="unit-block" xmlns="http://www.w3.org/2000/svg" width="200px" height="150px" x="600px" y="350px"  stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="800px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-8">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="595,350 595,520 430,520 430,500 380,500 380,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-9">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="375,350 375,500 300,500 300,520 220,520 220,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="375px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-10">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="215,350 215,520 150,520 150,540 50,540,50,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="215px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<!-- /right_area -->
+						</svg>
+						<!-- /level__pins -->
+					</div>
+					<div class="level level--2" aria-label="Level 2">
+						<svg class="map map--2" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+							<title>Map Level 2</title>
+							<polygon points="50,90 125,90 125,70 400,70 400,50 675,50 675,30 910,30 910,10 1110,10 1110,375 1130,375 1130,620 1150,620 1150,700 800,700 800,500 600,500 600,520 430,520 430,500 300,500 300,520 150,520 150,540 50,540" stroke="#bbb" stroke-width="10"  class="map__ground" />
+							<!-- left__outline -->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="910px" height="5px" x="50px" y="220px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="150px" height="5px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="25px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /left__outline -->
+							<!-- left___area  -->
+							<g class="unit unit-1">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="50,90 125,90 125,70 320,70 320,220 50,220 " stroke="#ffffff" stroke-width="0" fill="#cccccc"/>
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="320px" y="70px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<g class="unit unit-2">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="325,70 400,70 400,50 595,50 595,220 325,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595" y="50px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-3">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="600,50 675,50 675,30 870,30 870,220 600,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="190px" x="870" y="30px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-4">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="875,30 910,30 910,10 1110,10 1110,200 960,200 960,220 875,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+							</g>
+							<g class="unit unit-5">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,205 1110,205 1110,375 1130,375 1130,430 965,430" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="475px" x="960px" y="225px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<!-- /left__area -->
+							<!--right out__line-->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="755px" height="5px" x="50px" y="345px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /right__outline -->
+							<!-- right__area -->
+							<g class="unit unit-6">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,435 1130,435 1130,620 1150,620 1150,700 965,700" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="170px" height="5px" x="965px" y="430px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-7">
+								<rect class="unit-block" xmlns="http://www.w3.org/2000/svg" width="200px" height="150px" x="600px" y="350px"  stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="800px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-8">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="595,350 595,520 430,520 430,500 380,500 380,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-9">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="375,350 375,500 300,500 300,520 220,520 220,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="375px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-10">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="215,350 215,520 150,520 150,540 50,540,50,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="215px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<!-- /right_area -->
+						</svg>
+						<!-- /level__pins -->
+					</div>
+					<div class="level level--3" aria-label="Level 3">
+						<svg class="map map--3" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+							<title>Map Level 3</title>
+							<polygon points="50,90 125,90 125,70 400,70 400,50 675,50 675,30 910,30 910,10 1110,10 1110,375 1130,375 1130,620 1150,620 1150,700 800,700 800,500 600,500 600,520 430,520 430,500 300,500 300,520 150,520 150,540 50,540" stroke="#bbb" stroke-width="10"  class="map__ground" />
+							<!-- left__outline -->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="910px" height="5px" x="50px" y="220px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="150px" height="5px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="25px" x="960px" y="200px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /left__outline -->
+							<!-- left___area  -->
+							<g class="unit unit-1">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="50,90 125,90 125,70 320,70 320,220 50,220 " stroke="#ffffff" stroke-width="0" fill="#cccccc"/>
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="320px" y="70px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<g class="unit unit-2">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="325,70 400,70 400,50 595,50 595,220 325,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595" y="50px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-3">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="600,50 675,50 675,30 870,30 870,220 600,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="190px" x="870" y="30px" stroke-width="0"  fill="#ffffff"/>
+							</g>
+							<g class="unit unit-4">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="875,30 910,30 910,10 1110,10 1110,200 960,200 960,220 875,220" stroke="#000000" stroke-width="0" fill="#cccccc" />
+							</g>
+							<g class="unit unit-5">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,205 1110,205 1110,375 1130,375 1130,430 965,430" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="475px" x="960px" y="225px" stroke-width="0" fill="#ffffff"/>
+							</g>
+							<!-- /left__area -->
+							<!--right out__line-->
+							<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="755px" height="5px" x="50px" y="345px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							<!-- /right__outline -->
+							<!-- right__area -->
+							<g class="unit unit-6">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="965,435 1130,435 1130,620 1150,620 1150,700 965,700" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="170px" height="5px" x="965px" y="430px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-7">
+								<rect class="unit-block" xmlns="http://www.w3.org/2000/svg" width="200px" height="150px" x="600px" y="350px"  stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="800px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-8">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="595,350 595,520 430,520 430,500 380,500 380,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="595px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-9">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="375,350 375,500 300,500 300,520 220,520 220,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="150px" x="375px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<g class="unit unit-10">
+								<polygon class="unit-block" xmlns="http://www.w3.org/2000/svg" points="215,350 215,520 150,520 150,540 50,540,50,350" stroke="#000000" stroke-width="0" fill="#cccccc" />
+								<rect xmlns="http://www.w3.org/2000/svg" stroke="#000000" width="5px" height="170px" x="215px" y="350px" stroke-width="0"  fill="#ffffff" class="units__outline" />
+							</g>
+							<!-- /right_area -->
+						</svg>
+						<!-- /level__pins -->
+					</div>
+				</div>
+				<!-- /levels -->
+			</div>
+			<!-- /mall -->
+
+		</div>
+	</div>
+</body>
+</html>
