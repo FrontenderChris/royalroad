@@ -7,6 +7,9 @@ get_header();
 
 	/****** Home Slider ******/
 	get_template_part('home','slider');
+
+    /****** Home floor plan ******/
+    get_template_part('home','floor-plan');
 			  
 	/****** Home colout ******/
 	get_template_part('home','service');

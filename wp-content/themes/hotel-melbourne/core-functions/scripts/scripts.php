@@ -12,6 +12,7 @@ function hotel_melbourne_scripts()
 	wp_enqueue_style('media-responsive', HOTEL_MELBOURNE_DIR_URI .'/css/media-responsive.css');
 	wp_enqueue_style('melbourne-flexslider', HOTEL_MELBOURNE_DIR_URI .'/css/flexslider/flexslider.css');
 	wp_enqueue_style('melbourne-photobox', HOTEL_MELBOURNE_DIR_URI .'/css/photobox.css');
+    wp_enqueue_style('customize', '/assets/css/customize.css');
 
 	if( $melbourne_custom_css['animation_enabled_disable'] !='' ){
 	wp_enqueue_style('animate', HOTEL_MELBOURNE_DIR_URI .'/css/animate.css');
