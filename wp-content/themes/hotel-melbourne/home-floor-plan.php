@@ -115,7 +115,7 @@
                 },
                 {
                     roomName: 'Azalea',
-                    bed: 2,
+                    bed: 1,
                     bath: 1,
                     area: 90,
                     price: '$800,000 - $900,000',
@@ -124,10 +124,10 @@
                 {
                     roomName: 'Gardenia',
                     bed: 2,
-                    bath: 1,
+                    bath: 2,
                     area: 95,
                     price: '$820,000 - $950,000',
-                    floorPlnImg: '/wp-content/uploads/2019/06/1bed1bath-2.jpg'
+                    floorPlnImg: '/wp-content/uploads/2019/06/2bed2bath.jpg'
                 },
                 {
                     roomName: 'Sunflower',
@@ -156,7 +156,7 @@
                 {
                     roomName: 'Dogwood',
                     bed: 3,
-                    bath: 2,
+                    bath: 2.5,
                     area: 120,
                     price: '$1,000,000 - $1,200,000',
                     floorPlnImg: '/wp-content/uploads/2019/06/3bed2.5bath.jpg'
@@ -198,7 +198,9 @@
                     $("#unit-bath").html(unit.bath + "&nbsp;bath");
                     $("#unit-price").html(unit.price);
                     $("#unit-floor-pln-img").attr("src", unit.floorPlnImg);
-                    $(".tab-content").fadeIn(1200);
+
+                    $(".tab-content").fadeIn(1200, function () {
+                    });
                 });
             });
         },
