@@ -194,3 +194,7 @@
     height: auto;
     width: 100%;
 }
+
+#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
+    z-index: 51;
+}
