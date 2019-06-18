@@ -30,7 +30,7 @@
     <div class="floor-content">
         <div class="container">
             <div class="row">
-                <div class="tabs-section col-md-3">
+                <div class="tabs-section col-md-3 wow fadeInLeft">
                     <ul class="nav nav-pills flex-column">
 <!--                        <li class="nav-selector nav-item">-->
 <!--                            <a href="javascript:void(0);" class="nav-link">Select Floor Plan</a>-->
@@ -58,7 +58,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tab-content col-md-9">
+                <div class="tab-content col-md-9 wow fadeInRight">
                     <div class="floor-pln">
                         <div class="blc-box">
                             <h1 id="unit-name">Lilly</h1>
