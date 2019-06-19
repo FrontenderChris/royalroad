@@ -198,3 +198,116 @@
 #wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
     z-index: 51;
 }
+
+.about-section {
+    position: relative;
+    background-size: cover;
+    border-bottom: .75rem solid #fff;
+}
+
+.about-section .bg-primary {
+    background-color: #FF4136!important;
+}
+
+.about-section .text-cont .tag {
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #FF4136;
+    padding: .75rem;
+}
+
+.about-section .text-cont {
+    font-size: 1.5rem;
+    padding: 70px 0 70px 0;
+}
+
+.about-section .text-cont h2 {
+    font-size: 3rem;
+    position: relative;
+    line-height: 1!important;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.about-section .text-cont h2:before {
+    bottom: 15px;
+    content: '';
+    width: 117px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+}
+
+.about-section .text-cont p {
+    color: #ffffff;
+}
+
+.about-section .btn {
+    background-color: transparent;
+    border-color: #ececec;
+    border-radius: 1.5rem;
+    color: #ececec;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .75rem 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: border-radius .5s ease,background-color .5s ease;
+    transition: border-radius .5s ease,background-color .5s ease;
+}
+
+.about-section .btn:hover {
+    background-color: #ffffff;
+    border-radius: 2.5rem;
+    color: #FF4136;
+}
+
+@media (min-width: 768px){
+    .about-section:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        display: block;
+        background-color: #FF4136;
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.8);
+        box-shadow: 0 0 10px rgba(0,0,0,.8);
+    }
+
+    .about-section:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        background-image: url(https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/line-before.png);
+        width: 7%;
+        bottom: 0;
+        top: 34.3%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .about-section .text-cont {
+        float: right;
+        max-width: 700px;
+        padding: 70px 70px 70px 0;
+    }
+
+    .about-section .text-cont .tag {
+        padding: 1.5rem;
+    }
+
+    .about-section .text-cont h2 {
+        font-size: 50px;
+    }
+
+    .about-section .box-360 .img-cont {
+        width: 40%;
+    }
+}

@@ -11,11 +11,14 @@
         /****** Home floor plan ******/
         get_template_part('home', 'floor-plan');
 
-        /****** Home blog ******/
-        get_template_part('home', 'blog');
+        /****** Home about ******/
+        get_template_part('home', 'about');
 
         /****** Home colout ******/
         get_template_part('home', 'service');
+
+        /****** Home blog ******/
+        get_template_part('home', 'blog');
 
         /****** Home gallery ******/
         get_template_part('home', 'gallery');
