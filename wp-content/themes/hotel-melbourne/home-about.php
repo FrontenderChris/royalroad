@@ -6,12 +6,12 @@
         <div class="row no-gutters">
             <div class="col-lg-6 bg-primary">
                 <div class="text-cont"><span class="tag">About Us</span>
-                    <h2>The Estates at Royal Road – Luxury Town House</h2>
+                    <h2>The Estates at Massey – Luxury Royal Road Town House</h2>
                     <p></p>
                     <p><strong><em>Live, Work, Play – Schedule a Tour Today!</em></strong></p>
-                    <p>Across from Blendon Woods Metro Park, The Estates at New Albany offers a pet-friendly community
-                        and the area’s largest one-, two-, and three-bedroom apartment homes and townhomes. When it
-                        comes to apartments in New Albany Ohio, look no further than The Estates at New Albany.</p>
+                    <p>Near the Westgate Shopping Centre, The Estates at Royal Road Town House offers a pet-friendly community
+                        and the area’s largest one-, two-, and three-bedroom townhomes. When it
+                        comes to estates in Massey, look no further than Luxury Royal Road Town House.</p>
                     <p></p>
                     <a href="javascript:void(0);" data-toggle="modal" data-target="#read-more-about" class="btn btn-outline-light btn-lg"> Read More </a>
                 </div>

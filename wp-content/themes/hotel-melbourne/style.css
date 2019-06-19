@@ -2317,7 +2317,7 @@ footer .links-social .link-groups .links ul li a:before {
     position: relative;
     display: block;
     width:85%;
-    background-color: rgba(255, 65, 54,0.8);
+    background-color: rgba(80, 80, 80,0.6);
 	  color:#fff;
     padding: 20px 40px;
     margin-left:7%;
@@ -2334,7 +2334,7 @@ footer .links-social .link-groups .links ul li a:before {
     bottom: -10px;
     pointer-events: none;
     top: -10px;
-    border: 5px solid rgba(255, 65, 54,0.9);
+    border: 5px solid rgba(80, 80, 80,0.7);
 }
 .blog-detail-description{
     padding: 30px 30px 10px 30px;
