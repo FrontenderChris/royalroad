@@ -15,9 +15,6 @@
                 <li class="nav-item"  data-bed-num="all">
                     <a href="javascript:void(0);" class="nav-link active" >All</a>
                 </li>
-                <li class="nav-item" data-bed-num="1">
-                    <a href="javascript:void(0);" class="nav-link" >1 Bed</a>
-                </li>
                 <li class="nav-item" data-bed-num="2">
                     <a href="javascript:void(0);" class="nav-link">2 Bed</a>
                 </li>
@@ -71,7 +68,7 @@
                                     <i class="icon-camera ">
                                         <img class="lazyload loaded" data-src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bed.svg" alt="" src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bed.svg">
                                     </i>
-                                    <span id="unit-bed">1 bed</span>
+                                    <span id="unit-bed">2 bed</span>
                                 </a>
                             </li>
                             <li>
@@ -107,7 +104,7 @@
             units: [
                 {
                     roomName: 'Lilly',
-                    bed: 1,
+                    bed: 2,
                     bath: 1,
                     area: 80,
                     price: '$800,000 - $900,000',
@@ -115,7 +112,7 @@
                 },
                 {
                     roomName: 'Azalea',
-                    bed: 1,
+                    bed: 2,
                     bath: 1,
                     area: 90,
                     price: '$800,000 - $900,000',
@@ -176,11 +173,20 @@
             $(".floor-nav .nav-item").on('click', function () {
                 let bedNum = $(this).data("bed-num");
                 let i = 0;
-                if ( bedNum === 'all' )
+                $(".floor-nav .nav-link.active").removeClass("active");
+                if ( bedNum === 'all' ){
                     $(".tabs-section .nav-link").show();
+                    $(".floor-nav .nav-item:first-child .nav-link").addClass("active");
+                }
                 else
                     $(_this.state.units).each(function (key, item) {
-                        bedNum === item.bed  ? $(".tabs-section .nav-link").eq(key).show() : $(".tabs-section .nav-link").eq(key).hide();
+                        if (bedNum === item.bed){
+                            $(".tabs-section .nav-link").eq(key).show();
+                            $(".floor-nav .nav-item").eq(bedNum - 1).find(".nav-link").addClass("active");
+                        }
+                        else {
+                            $(".tabs-section .nav-link").eq(key).hide();
+                        }
                     });
             });
         },
@@ -199,8 +205,7 @@
                     $("#unit-price").html(unit.price);
                     $("#unit-floor-pln-img").attr("src", unit.floorPlnImg);
 
-                    $(".tab-content").fadeIn(1200, function () {
-                    });
+                    $(".tab-content").fadeIn(1200);
                 });
             });
         },
