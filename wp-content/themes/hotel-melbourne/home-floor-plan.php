@@ -101,6 +101,7 @@
     var floorPlnComponent = {
         state: {
             actived: 0,
+            // 各单元数据
             units: [
                 {
                     roomName: 'Lilly',
@@ -168,28 +169,28 @@
             this.navHandleClick();
             this.tabsHandleClick();
         },
+        // 绑定顶部切换按钮点击事件
         navHandleClick: function () {
             let _this = this;
             $(".floor-nav .nav-item").on('click', function () {
                 let bedNum = $(this).data("bed-num");
                 let i = 0;
                 $(".floor-nav .nav-link.active").removeClass("active");
-                if ( bedNum === 'all' ){
+                if (bedNum === 'all') {
                     $(".tabs-section .nav-link").show();
                     $(".floor-nav .nav-item:first-child .nav-link").addClass("active");
-                }
-                else
+                } else
                     $(_this.state.units).each(function (key, item) {
-                        if (bedNum === item.bed){
+                        if (bedNum === item.bed) {
                             $(".tabs-section .nav-link").eq(key).show();
                             $(".floor-nav .nav-item").eq(bedNum - 1).find(".nav-link").addClass("active");
-                        }
-                        else {
+                        } else {
                             $(".tabs-section .nav-link").eq(key).hide();
                         }
                     });
             });
         },
+        // 绑定左侧Tab点击事件
         tabsHandleClick: function () {
             let _this = this;
             $(".tabs-section .nav-link").on('click', function () {
