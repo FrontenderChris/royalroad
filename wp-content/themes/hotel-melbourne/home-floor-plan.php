@@ -162,7 +162,7 @@
             ]
         },
         init: function () {
-            
+            // initialize
         },
         load: function () {
             this.init();
@@ -189,6 +189,9 @@
                         }
                     });
             });
+            $(".floor-nav .nav-item").on('click', function () {
+                let bedNum = $(this).data("bed-num");
+            })
         },
         // 绑定左侧Tab点击事件
         tabsHandleClick: function () {
@@ -201,8 +204,8 @@
                 $(".tab-content").fadeOut(800, function () {
                     $("#unit-name").html(unit.roomName);
                     $("#unit-area").html(unit.area);
-                    $("#unit-bed").html(unit.bed + "&nbsp;bed");
-                    $("#unit-bath").html(unit.bath + "&nbsp;bath");
+                    $("#unit-bed").html(unit.bed + "&nbsp;&nbsp;bed");
+                    $("#unit-bath").html(unit.bath + "&nbsp;&nbsp;bath");
                     $("#unit-price").html(unit.price);
                     $("#unit-floor-pln-img").attr("src", unit.floorPlnImg);
 
