@@ -33,34 +33,34 @@
 <!--                            <a href="javascript:void(0);" class="nav-link">Select Floor Plan</a>-->
 <!--                        </li>-->
                         <li class="nav-item">
-                            <a class="active nav-link" href="javascript:" data-unit-id="0">Lilly</a>
+                            <a class="active nav-link" href="javascript:" data-unit-id="0">32A</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="1">Azalea</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="1">32B</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="2">Gardenia</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="2">32C</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="3">Sunflower</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="3">32D</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="4">Magnolia</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="4">32E</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="5">Camelia</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="5">32F</a>
                         </li>
                         <li class="nav-item">
-                            <a class=" nav-link" href="javascript:" data-unit-id="6">Dogwood</a>
+                            <a class=" nav-link" href="javascript:" data-unit-id="6">32G</a>
                         </li>
                     </ul>
                 </div>
                 <div class="tab-content col-md-9 wow fadeInRight">
                     <div class="floor-pln">
                         <div class="blc-box">
-                            <h1 id="unit-name">Lilly</h1>
-                            <p><span id="unit-area">90</span> M<sup>2</sup></p>
-                            <p id="unit-price">$700,000 - $800,000</p>
+                            <h1 id="unit-name"></h1>
+                            <p><span id="unit-area"></span> M<sup>2</sup></p>
+                            <p id="unit-price"></p>
                         </div>
                         <ul class="floor-details">
                             <li>
@@ -68,7 +68,7 @@
                                     <i class="icon-camera ">
                                         <img class="lazyload loaded" data-src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bed.svg" alt="" src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bed.svg">
                                     </i>
-                                    <span id="unit-bed">2 bed</span>
+                                    <span id="unit-bed"></span>
                                 </a>
                             </li>
                             <li>
@@ -76,7 +76,7 @@
                                     <i class="icon-camrecorder">
                                         <img class="lazyload loaded" data-src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bath.png" alt="" src="https://2u0yuyu2fs02fa819ut739hy-wpengine.netdna-ssl.com/wp-content/themes/connorgroup-2019-understrap/img/bath.png">
                                     </i>
-                                    <span id="unit-bath">1 bath</span>
+                                    <span id="unit-bath"></span>
                                 </a>
                             </li>
                             <li class="request-tour-btn">
@@ -104,7 +104,7 @@
             // 各单元数据
             units: [
                 {
-                    roomName: 'Lilly',
+                    roomName: '32A',
                     bed: 2,
                     bath: 1,
                     area: 80,
@@ -112,7 +112,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/1bed1bath-1.jpg'
                 },
                 {
-                    roomName: 'Azalea',
+                    roomName: '32B',
                     bed: 2,
                     bath: 1,
                     area: 90,
@@ -120,7 +120,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/1bed1bath-2.jpg'
                 },
                 {
-                    roomName: 'Gardenia',
+                    roomName: '32C',
                     bed: 2,
                     bath: 2,
                     area: 95,
@@ -128,7 +128,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/2bed2bath.jpg'
                 },
                 {
-                    roomName: 'Sunflower',
+                    roomName: '32D',
                     bed: 2,
                     bath: 2,
                     area: 95,
@@ -136,7 +136,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/2bed2bath-2.jpg'
                 },
                 {
-                    roomName: 'Magnolia',
+                    roomName: '32E',
                     bed: 2,
                     bath: 2,
                     area: 100,
@@ -144,7 +144,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/2bed2bath-2.jpg'
                 },
                 {
-                    roomName: 'Camelia',
+                    roomName: '32F',
                     bed: 3,
                     bath: 2,
                     area: 105,
@@ -152,7 +152,7 @@
                     floorPlnImg: '/wp-content/uploads/2019/06/3bed2bath.jpg'
                 },
                 {
-                    roomName: 'Dogwood',
+                    roomName: '32G',
                     bed: 3,
                     bath: 2.5,
                     area: 120,
@@ -168,6 +168,7 @@
             this.init();
             this.navHandleClick();
             this.tabsHandleClick();
+            $(".tabs-section .nav-item").eq(0).find(".nav-link").trigger("click");
         },
         // 绑定顶部切换按钮点击事件
         navHandleClick: function () {
@@ -189,9 +190,6 @@
                         }
                     });
             });
-            $(".floor-nav .nav-item").on('click', function () {
-                let bedNum = $(this).data("bed-num");
-            })
         },
         // 绑定左侧Tab点击事件
         tabsHandleClick: function () {
