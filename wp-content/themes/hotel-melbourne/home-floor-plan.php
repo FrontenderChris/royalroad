@@ -100,7 +100,7 @@
 <script type="application/javascript">
     var floorPlnComponent = {
         state: {
-            actived: 0,
+            active: 0,
             // 各单元数据
             units: [
                 {
