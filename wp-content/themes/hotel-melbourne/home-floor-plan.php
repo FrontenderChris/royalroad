@@ -168,7 +168,6 @@
             this.init();
             this.navHandleClick();
             this.tabsHandleClick();
-            $(".tabs-section .nav-item").eq(0).find(".nav-link").trigger("click");
         },
         // 绑定顶部切换按钮点击事件
         navHandleClick: function () {
@@ -210,6 +209,7 @@
                     $(".tab-content").fadeIn(1200);
                 });
             });
+            $(".tabs-section .nav-item").eq(0).find(".nav-link").trigger("click");
         },
         tabSwitch: function (unitId) {
             $(".tabs-section .nav-link.active").removeClass("active");
